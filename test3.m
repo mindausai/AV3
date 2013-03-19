@@ -1,6 +1,6 @@
 function[channel] = test3(image1)
 
-image2 = image1(:,:,2) < 40;
+image2 = image1(:,:,2) < 50 & image1(:,:,2) > 0;
 
 % label all the connected objects in image
 [channel,num] = bwlabel(image2,4);

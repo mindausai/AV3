@@ -2,12 +2,15 @@ global model planelist planenorm facelines
 
 load data1
 R = frame(10).XYZ;
+
+random = unidrnd(2, 480, 640) - 1;
+
 figure(1)
 clf
 hold on
-x = R(:,:,1);
-y = R(:,:,2);
-z = R(:,:,3);
+x = random.*R(:,:,1);
+y = random.*R(:,:,2);
+z = random.*R(:,:,3);
 R = [x(:),y(:),z(:)];
 plot3(x,y,z,'k.')
 
